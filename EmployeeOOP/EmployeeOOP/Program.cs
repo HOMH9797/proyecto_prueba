@@ -25,8 +25,20 @@ namespace EmployeeOOP
 
                 //Inicialización de la clase Date
                 Date dateObject = new Date(day, month, year);
-                Console.ReadKey();
                 Console.WriteLine(dateObject.ToString());
+
+                SalaryEmployee salaryEmployee = new SalaryEmployee()
+                {
+                    Id = 10291,
+                    FirstName = Console.ReadLine(),
+                    LastName = Console.ReadLine(),
+                    BirthDate = dateObject,
+                    HiringDate = dateObject,
+                    IsActive = true,
+                    Salary = Decimal.Parse(Console.ReadLine()),
+                };
+
+                Console.WriteLine(salaryEmployee);
                 Console.ReadKey();
             }
             catch (Exception ex)
